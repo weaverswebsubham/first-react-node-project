@@ -2,7 +2,7 @@ import React from "react";
 import SubmitButtonComponent from "../UI-Components/SubmitButtonComponent";
 import TextFieldComponent from "../UI-Components/TextFieldComponent";
 
-function SignupPageComponent(props) {
+function LoginPageComponent(props) {
   return (
     <>
       <div className="flex flex-row min-h-screen justify-center items-center">
@@ -12,15 +12,12 @@ function SignupPageComponent(props) {
         >
           <div className="text-center mb-5">
             <h5 class="text-xl font-medium text-gray-900 dark:text-white">
-              Sign up
+              Login
             </h5>
           </div>
           <div>
-            <TextFieldComponent type="text" placeholder="Name" />
             <TextFieldComponent type="text" placeholder="Email" />
-            <TextFieldComponent type="text" placeholder="Phone Number" />
             <TextFieldComponent type="text" placeholder="Password" />
-            <TextFieldComponent type="text" placeholder="Confirm Password" />
           </div>
           <div className="text-center mt-6">
             <SubmitButtonComponent type="submit" name="Submit" />
@@ -31,4 +28,4 @@ function SignupPageComponent(props) {
   );
 }
 
-export default SignupPageComponent;
+export default LoginPageComponent;
