@@ -11,19 +11,19 @@ function LoginPageComponent(props) {
             Sign in to our platform
           </h5>
           <div>
-            <TextFieldComponent type="text" placeholder="Enter your name." />
-            <TextFieldComponent type="text" placeholder="Enter your email." />
+            <TextFieldComponent type="text" placeholder="Name" />
+            <TextFieldComponent type="text" placeholder="Email" />
             <TextFieldComponent
               type="text"
-              placeholder="Enter your phone number."
+              placeholder="Phone Number"
             />
             <TextFieldComponent
               type="text"
-              placeholder="Enter your password."
+              placeholder="Password"
             />
             <TextFieldComponent
               type="text"
-              placeholder="Enter your confirm password."
+              placeholder="Confirm Password"
             />
           </div>
           <SubmitButtonComponent type="submit" name="Submit" />
