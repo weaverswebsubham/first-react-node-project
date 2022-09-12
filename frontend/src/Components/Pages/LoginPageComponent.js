@@ -11,7 +11,7 @@ function LoginPageComponent(props) {
           action=""
         >
           <div className="text-center mb-5">
-            <h5 class="text-xl font-medium text-gray-900 dark:text-white">
+            <h5 className="text-xl font-medium text-gray-900 dark:text-white">
               Login
             </h5>
           </div>
