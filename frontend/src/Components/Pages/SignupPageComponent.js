@@ -1,21 +1,27 @@
 import React from "react";
 import { useFormik } from "formik";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+// Validations.
+import { SignupSchema } from "../../validations/login&register/auth";
+
+// Components
 import SubmitButtonComponent from "../UI-Components/SubmitButtonComponent";
 import TextFieldComponent from "../UI-Components/TextFieldComponent";
 
 function SignupPageComponent(props) {
-
   const formik = useFormik({
     initialValues: {
       name: "",
       email: "",
       phoneNumber: "",
       password: "",
-      confirmPassword: ""
+      confirmPassword: "",
     },
+    resolver: yupResolver(SignupSchema),
     onSubmit: (values) => {
-      console.log(values, "<<-- Values....")
-    }
+      console.log(values, "<<-- Values....");
+    },
   });
 
   return (
@@ -32,11 +38,41 @@ function SignupPageComponent(props) {
             </h5>
           </div>
           <div>
-            <TextFieldComponent name="name" value={formik.values.name} onChange={formik.handleChange} type="text" placeholder="Name" />
-            <TextFieldComponent name="email" value={formik.values.email} onChange={formik.handleChange} type="text" placeholder="Email" />
-            <TextFieldComponent name="phoneNumber" value={formik.values.phoneNumber} onChange={formik.handleChange} type="text" placeholder="Phone Number" />
-            <TextFieldComponent name="password" value={formik.values.password} onChange={formik.handleChange} type="text" placeholder="Password" />
-            <TextFieldComponent name="confirmPassword" value={formik.values.confirmPassword} onChange={formik.handleChange} type="text" placeholder="Confirm Password" />
+            <TextFieldComponent
+              name="name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              type="text"
+              placeholder="Name"
+            />
+            <TextFieldComponent
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              type="text"
+              placeholder="Email"
+            />
+            <TextFieldComponent
+              name="phoneNumber"
+              value={formik.values.phoneNumber}
+              onChange={formik.handleChange}
+              type="text"
+              placeholder="Phone Number"
+            />
+            <TextFieldComponent
+              name="password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              type="text"
+              placeholder="Password"
+            />
+            <TextFieldComponent
+              name="confirmPassword"
+              value={formik.values.confirmPassword}
+              onChange={formik.handleChange}
+              type="text"
+              placeholder="Confirm Password"
+            />
           </div>
           <div className="text-center mt-6">
             <SubmitButtonComponent type="submit" name="Submit" />
