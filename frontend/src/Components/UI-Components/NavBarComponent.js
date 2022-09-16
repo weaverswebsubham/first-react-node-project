@@ -7,15 +7,13 @@ function NavBarComponent(props) {
       <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
         <ul className="flex items-center">
           <Link to="/signup">
-            <li className="mr-6">
-              <a className="text-white hover:text-gray-900 font-bold">
-                Sign up
-              </a>
+            <li className="mr-6 text-white hover:text-gray-900 font-bold">
+              Sign up
             </li>
           </Link>
           <Link to="/">
-            <li className="mr-6">
-              <a className="text-white hover:text-gray-900 font-bold">Login</a>
+            <li className="mr-6 text-white hover:text-gray-900 font-bold">
+              Login
             </li>
           </Link>
         </ul>
